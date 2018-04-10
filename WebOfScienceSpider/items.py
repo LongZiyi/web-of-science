@@ -20,14 +20,15 @@ class LiteratureItem(scrapy.Item):
     source = scrapy.Field()
     source_info = scrapy.Field()
     doi = scrapy.Field()
+    doi_object_id = scrapy.Field()  # 主键
     year = scrapy.Field()
     type = scrapy.Field()
     abstract = scrapy.Field()
     keyword = scrapy.Field()
-    author_info = scrapy.Field()
+    # author_info = scrapy.Field()
     fund = scrapy.Field()
     publisher = scrapy.Field()
-    imfact_factor = scrapy.Field()
+    # imfact_factor = scrapy.Field()
     cite_num = scrapy.Field()
     cited_num = scrapy.Field()
     cited_180 = scrapy.Field()
@@ -35,3 +36,5 @@ class LiteratureItem(scrapy.Item):
     crawl_time = scrapy.Field()
     update_time = scrapy.Field()
 
+    def get_insert_sql(self):
+        pass

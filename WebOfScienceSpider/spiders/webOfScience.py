@@ -2,9 +2,12 @@
 import scrapy
 import requests
 import re
+import datetime
 from urllib import parse
 from scrapy.loader import ItemLoader
 from WebOfScienceSpider.items import LiteratureItem
+from WebOfScienceSpider.utils.common import get_md5
+from WebOfScienceSpider.settings import SQL_DATETIME_FORMAT
 
 HEADERS = {
     'Origin': 'https://apps.webofknowledge.com',
@@ -115,28 +118,114 @@ class WebofscienceSpider(scrapy.Spider):
         WebofscienceSpider.n += 1
         print(WebofscienceSpider.n)
 
-        # item_loader = ItemLoader(item=LiteratureItem, response=response)
-        # item_loader.add_value('url', response.url)
-        # item_loader.add_css('title', '.l-content .title value')
-        # item_loader.add_css('author')
-        # item_loader.add_css('source')
-        # item_loader.add_css('source_info')
-        # item_loader.add_css('doi')
-        # item_loader.add_css('year')
-        # item_loader.add_css('type')
-        # item_loader.add_css('abstract')
-        # item_loader.add_css('keyword')
-        # item_loader.add_css('author_info')
-        # item_loader.add_css('fund')
-        # item_loader.add_css('publisher')
-        # item_loader.add_css('imfact_factor')
-        # item_loader.add_css('cite_num')
-        # item_loader.add_css('cited_num')
-        # item_loader.add_css('cited_180')
-        # item_loader.add_css('cited_2013')
-        # item_loader.add_css('crawl_time')
-        # item_loader.add_css('update_time')
+        # 标题
+        title = response.css(".l-content .title value::text").extract_first('')
+        # 提取作者
+        authors = response.xpath("//div[@class='l-content']//div[@class='block-record-info']/p[@class='FR_field']/span[@class='hitHilite']/text()").extract_first('')
+        author_list = response.xpath("//div[@class='l-content']//div[@class='block-record-info']/p[@class='FR_field']/text()").extract()
+        for i in author_list:
+            if i != '\n' and i != '; ':
+                res=re.search('^ \(.*\)$', i)
+                if res is not None:
+                    author = res.group().replace('(', '').replace(')', '').replace(' ', '')
+                    authors = authors + '; ' + author
+        # 期刊名
+        source = response.css(".sourceTitle_txt value::text").extract_first('')
+        # 期刊信息
+        info_list = response.css('.block-record-info-source-values p')
+        source_info = ''
+        for i in info_list:
+            num = i.css('value::text').extract_first('')
+            name = i.css('span::text').extract_first('')
+            if name == '卷:':
+                source_info = source_info + num + '卷'
+            if name == '期:':
+                source_info = source_info + num + '期'
+            if name == '页:':
+                source_info = source_info + num + '页'
+        # doi、出版年、文献类型
+        rsp_list = response.xpath("//div[@class='block-record-info block-record-info-source']/p[@class='FR_field']")
+        for i in rsp_list:
+            name = i.xpath('span/text()').extract_first('')
+            value = i.xpath('value/text()').extract_first('')
+            if name == 'DOI:':
+                doi = value
+            if name == '出版年:':
+                res = re.search('\d{4}', value)
+                year = int(res.group())
+            if name == '文献类型:':
+                values = i.xpath('text()').extract()
+                for value in values:
+                    if value != '\n':
+                        type = value
+        # 摘要
+        rsp_list = response.css(".l-content .block-record-info")
+        for i in rsp_list:
+            if i.css(".title3::text").extract_first('') == '摘要':
+                abstract = i.css(".FR_field::text").extract_first('')
+        # 关键词、出版商
+        rsp_list = response.xpath("//div[@class='l-content']//div[@class='block-record-info']")
+        keyword = ''
+        for i in rsp_list:
+            name = i.xpath("div[@class='title3']/text()").extract()
+            for j in name:
+                print(j)
+                if j == '关键词':
+                    key = i.xpath("p[@class='FR_field']/span[@class='FR_label']/text()").extract()
+                    for k in key:
+                        if k == '作者关键词:':
+                            value = i.xpath("p[@class='FR_field']/a[@title='查找此作者关键词的更多记录']/text()").extract_first()
+                            keyword = keyword + '作者关键词: ' + value + '; '
+                        if k == 'KeyWords Plus:':
+                            value = i.xpath("p[@class='FR_field']/a[@title='查找此扩展关键词的更多记录']/text()").extract_first()
+                            keyword = keyword + 'KeyWords Plus: ' + value
+                if j == '出版商':
+                    publisher = i.xpath("p[@class='FR_field']/value/text()").extract_first()
+        # 基金
+        funds = ''
+        rsp_list = response.xpath("//tr[@class='fr_data_row']")
+        for i in rsp_list:
+            fund = i.xpath("td/text()").extract_first()
+            funds = funds + fund + ','
+            fund_nums = i.xpath("td/div/text()").extract()
+            for num in fund_nums:
+                if j != '':
+                    funds = funds + '(' + num + '); '
+        # 被引频次、参考文献数量、最近180天、2013年至今
+        rsp_list = response.xpath("//span[@class='large-number']/text()").extract()
+        cited_2013 = int(rsp_list.pop())
+        cited_180 = int(rsp_list.pop())
+        cite_num = int(rsp_list.pop())
+        cited_num = int(rsp_list.pop())
+        # 爬取时间、更新时间
+        crawl_time = datetime.datetime.now().strftime(SQL_DATETIME_FORMAT)
+        update_time = datetime.datetime.now().strftime(SQL_DATETIME_FORMAT)
 
+        item_loader = ItemLoader(item=LiteratureItem, response=response)
+        item_loader.add_value('url', response.url)
+        item_loader.add_value('title', title)
+        item_loader.add_value('author', authors)
+        item_loader.add_value('source', source)
+        item_loader.add_value('source_info', source_info)
+        item_loader.add_value('doi', doi)
+        item_loader.add_value('doi_object_id', get_md5(doi))
+        item_loader.add_value('year', year)
+        item_loader.add_value('type', type)
+        item_loader.add_value('abstract', abstract)
+        item_loader.add_value('keyword', keyword)
+        # item_loader.add_css('author_info')
+        item_loader.add_value('fund', funds)
+        item_loader.add_value('publisher', publisher)
+        # item_loader.add_css('imfact_factor')
+        item_loader.add_value('cite_num', cite_num)
+        item_loader.add_value('cited_num', cited_num)
+        item_loader.add_value('cited_180', cited_180)
+        item_loader.add_value('cited_2013', cited_2013)
+        item_loader.add_value('crawl_time', crawl_time)
+        item_loader.add_value('update_time', update_time)
+
+        article_item=item_loader.load_item()
+        yield article_item
 
     def _get_condition(self):
         '''

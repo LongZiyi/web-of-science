@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b9900ac-5fc7-4b18-8bd4-b5b7393d9213" name="Default" comment="" />
+    <list default="true" id="3b9900ac-5fc7-4b18-8bd4-b5b7393d9213" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebOfScienceSpider/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebOfScienceSpider/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebOfScienceSpider/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebOfScienceSpider/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebOfScienceSpider/spiders/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebOfScienceSpider/spiders/webOfScience.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebOfScienceSpider/spiders/webOfScience.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,26 +18,19 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/WebOfScienceSpider$webOfScience.coverage" NAME="webOfScience Coverage Results" MODIFIED="1523108437996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WebOfScienceSpider/spiders" />
     <SUITE FILE_PATH="coverage/WebOfScienceSpider$mian.coverage" NAME="mian Coverage Results" MODIFIED="1522995153492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/WebOfScienceSpider$main.coverage" NAME="main Coverage Results" MODIFIED="1523231146107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WebOfScienceSpider$test.coverage" NAME="test Coverage Results" MODIFIED="1523279378152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WebOfScienceSpider/spiders" />
+    <SUITE FILE_PATH="coverage/WebOfScienceSpider$common.coverage" NAME="common Coverage Results" MODIFIED="1523372076923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/WebOfScienceSpider/utils" />
+    <SUITE FILE_PATH="coverage/WebOfScienceSpider$main.coverage" NAME="main Coverage Results" MODIFIED="1523368389488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="webOfScience.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WebOfScienceSpider/spiders/webOfScience.py">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="48" selection-start-line="48" selection-end-line="165" selection-end-column="18" />
+            <state relative-caret-position="216">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding>
-                <element signature="e#24#37#0" expanded="true" />
-                <element signature="e#100#494#0" />
-                <element signature="e#507#1413#0" />
-                <element signature="e#1527#4985#0" />
-                <element signature="e#1886#2437#0" />
-                <element signature="e#2487#3565#0" />
-                <element signature="e#3866#4937#0" />
-                <element signature="e#3615#3683#1" />
-                <element signature="e#3930#4075#0" />
-                <element signature="e#4109#4845#0" />
+                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -40,32 +39,32 @@
       <file leaf-file-name="items.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebOfScienceSpider/items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="35" column="15" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="15" />
+            <state relative-caret-position="213">
+              <caret line="21" column="7" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="7" />
               <folding>
                 <element signature="n#!!doc" />
+                <element signature="e#215#296#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
+      <file leaf-file-name="webOfScience.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WebOfScienceSpider/spiders/webOfScience.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+            <state relative-caret-position="-659">
+              <caret line="154" column="39" selection-start-line="154" selection-start-column="39" selection-end-line="154" selection-end-column="39" />
               <folding>
-                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#241#635#0" />
+                <element signature="e#648#1554#0" />
+                <element signature="e#1838#1987#0" />
+                <element signature="e#2027#2578#0" />
+                <element signature="e#2619#3870#0" />
+                <element signature="e#7515#7772#0" />
+                <element signature="e#6017#6162#0" />
+                <element signature="e#6147#6883#0" />
+                <element signature="e#6263#6729#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebOfScienceSpider/spiders/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -79,15 +78,24 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>title3</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/mian.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/WebOfScienceSpider/spiders/test.py" />
+        <option value="$PROJECT_DIR$/WebOfScienceSpider/utils/common.py" />
         <option value="$PROJECT_DIR$/WebOfScienceSpider/settings.py" />
         <option value="$PROJECT_DIR$/WebOfScienceSpider/items.py" />
         <option value="$PROJECT_DIR$/WebOfScienceSpider/spiders/webOfScience.py" />
-        <option value="$PROJECT_DIR$/WebOfScienceSpider/spiders/test.py" />
       </list>
     </option>
   </component>
@@ -98,16 +106,17 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="640" />
-    <option name="width" value="640" />
-    <option name="height" value="1040" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -126,10 +135,17 @@
               <item name="WebOfScienceSpider" type="462c0819:PsiDirectoryNode" />
               <item name="spiders" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="WebOfScienceSpider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebOfScienceSpider" type="462c0819:PsiDirectoryNode" />
+              <item name="WebOfScienceSpider" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -151,7 +167,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.common">
+    <configuration name="common" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="WebOfScienceSpider" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/WebOfScienceSpider/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WebOfScienceSpider/utils/common.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="WebOfScienceSpider" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -190,6 +225,25 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="WebOfScienceSpider" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/WebOfScienceSpider/spiders" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WebOfScienceSpider/spiders/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="webOfScience" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="WebOfScienceSpider" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -213,10 +267,14 @@
       <item itemvalue="Python.mian" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.webOfScience" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.common" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.common" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.webOfScience" />
         <item itemvalue="Python.mian" />
       </list>
@@ -242,17 +300,17 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3659306" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32947367" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32947367" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36631578" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19189766" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19402985" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5688749" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.56631577" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -270,25 +328,69 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="28" />
+      <option name="time" value="50" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/WebOfScienceSpider/spiders/webOfScience.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4788">
+          <caret line="138" selection-start-line="138" selection-end-line="138" />
+          <folding>
+            <element signature="e#241#635#0" />
+            <element signature="e#648#1554#0" />
+            <element signature="e#1838#1987#0" />
+            <element signature="e#2027#2578#0" />
+            <element signature="e#2619#3870#0" />
+            <element signature="e#7515#7772#0" />
+            <element signature="e#6017#6162#0" />
+            <element signature="e#6147#6883#0" />
+            <element signature="e#6263#6729#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebOfScienceSpider/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="35" column="15" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="15" />
+          <folding>
+            <element signature="n#!!doc" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebOfScienceSpider/spiders/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebOfScienceSpider/spiders/webOfScience.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2376">
           <caret line="104" column="47" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
           <folding>
-            <element signature="e#24#37#0" expanded="true" />
-            <element signature="e#100#494#0" />
-            <element signature="e#507#1413#0" />
-            <element signature="e#1527#4985#0" />
-            <element signature="e#1886#2437#0" />
-            <element signature="e#2487#3565#0" />
-            <element signature="e#3866#4937#0" />
-            <element signature="e#3615#3683#1" />
-            <element signature="e#3930#4075#0" />
-            <element signature="e#4109#4845#0" />
+            <element signature="e#241#635#0" />
+            <element signature="e#648#1554#0" />
+            <element signature="e#1838#1987#0" />
+            <element signature="e#2027#2578#0" />
+            <element signature="e#2619#3870#0" />
+            <element signature="e#7515#7772#0" />
+            <element signature="e#6017#6162#0" />
+            <element signature="e#6147#6883#0" />
+            <element signature="e#6263#6729#0" />
           </folding>
         </state>
       </provider>
@@ -308,16 +410,15 @@
         <state relative-caret-position="396">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
-            <element signature="e#24#37#0" expanded="true" />
-            <element signature="e#100#494#0" />
-            <element signature="e#507#1413#0" />
-            <element signature="e#1527#4985#0" />
-            <element signature="e#1886#2437#0" />
-            <element signature="e#2487#3565#0" />
-            <element signature="e#3866#4937#0" />
-            <element signature="e#3615#3683#1" />
-            <element signature="e#3930#4075#0" />
-            <element signature="e#4109#4845#0" />
+            <element signature="e#241#635#0" />
+            <element signature="e#648#1554#0" />
+            <element signature="e#1838#1987#0" />
+            <element signature="e#2027#2578#0" />
+            <element signature="e#2619#3870#0" />
+            <element signature="e#7515#7772#0" />
+            <element signature="e#6017#6162#0" />
+            <element signature="e#6147#6883#0" />
+            <element signature="e#6263#6729#0" />
           </folding>
         </state>
       </provider>
@@ -337,16 +438,15 @@
         <state relative-caret-position="2592">
           <caret line="82" column="22" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
           <folding>
-            <element signature="e#24#37#0" expanded="true" />
-            <element signature="e#100#494#0" />
-            <element signature="e#507#1413#0" />
-            <element signature="e#1527#4985#0" />
-            <element signature="e#1886#2437#0" />
-            <element signature="e#2487#3565#0" />
-            <element signature="e#3866#4937#0" />
-            <element signature="e#3615#3683#1" />
-            <element signature="e#3930#4075#0" />
-            <element signature="e#4109#4845#0" />
+            <element signature="e#241#635#0" />
+            <element signature="e#648#1554#0" />
+            <element signature="e#1838#1987#0" />
+            <element signature="e#2027#2578#0" />
+            <element signature="e#2619#3870#0" />
+            <element signature="e#7515#7772#0" />
+            <element signature="e#6017#6162#0" />
+            <element signature="e#6147#6883#0" />
+            <element signature="e#6263#6729#0" />
           </folding>
         </state>
       </provider>
@@ -367,16 +467,15 @@
         <state relative-caret-position="1152">
           <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
           <folding>
-            <element signature="e#24#37#0" expanded="true" />
-            <element signature="e#100#494#0" />
-            <element signature="e#507#1413#0" />
-            <element signature="e#1527#4985#0" />
-            <element signature="e#1886#2437#0" />
-            <element signature="e#2487#3565#0" />
-            <element signature="e#3866#4937#0" />
-            <element signature="e#3615#3683#1" />
-            <element signature="e#3930#4075#0" />
-            <element signature="e#4109#4845#0" />
+            <element signature="e#241#635#0" />
+            <element signature="e#648#1554#0" />
+            <element signature="e#1838#1987#0" />
+            <element signature="e#2027#2578#0" />
+            <element signature="e#2619#3870#0" />
+            <element signature="e#7515#7772#0" />
+            <element signature="e#6017#6162#0" />
+            <element signature="e#6147#6883#0" />
+            <element signature="e#6263#6729#0" />
           </folding>
         </state>
       </provider>
@@ -397,16 +496,15 @@
         <state relative-caret-position="612">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
-            <element signature="e#24#37#0" expanded="true" />
-            <element signature="e#100#494#0" />
-            <element signature="e#507#1413#0" />
-            <element signature="e#1527#4985#0" />
-            <element signature="e#1886#2437#0" />
-            <element signature="e#2487#3565#0" />
-            <element signature="e#3866#4937#0" />
-            <element signature="e#3615#3683#1" />
-            <element signature="e#3930#4075#0" />
-            <element signature="e#4109#4845#0" />
+            <element signature="e#241#635#0" />
+            <element signature="e#648#1554#0" />
+            <element signature="e#1838#1987#0" />
+            <element signature="e#2027#2578#0" />
+            <element signature="e#2619#3870#0" />
+            <element signature="e#7515#7772#0" />
+            <element signature="e#6017#6162#0" />
+            <element signature="e#6147#6883#0" />
+            <element signature="e#6263#6729#0" />
           </folding>
         </state>
       </provider>
@@ -523,55 +621,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebOfScienceSpider/items.py">
+    <entry file="file://$PROJECT_DIR$/WebOfScienceSpider/spiders/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="35" column="15" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="15" />
-          <folding>
-            <element signature="n#!!doc" />
-          </folding>
+        <state>
+          <caret lean-forward="true" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Anaconda3/envs/webOfScience_spider/Lib/site-packages/scrapy/item.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="100" column="6" selection-start-line="100" selection-start-column="6" selection-end-line="100" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Anaconda3/envs/webOfScience_spider/Lib/site-packages/scrapy/http/response/text.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="114" selection-start-line="114" selection-end-line="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebOfScienceSpider/utils/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebOfScienceSpider/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        <state relative-caret-position="3312">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        <state relative-caret-position="216">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebOfScienceSpider/spiders/test.py">
+    <entry file="file://$PROJECT_DIR$/WebOfScienceSpider/items.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        <state relative-caret-position="213">
+          <caret line="21" column="7" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="7" />
+          <folding>
+            <element signature="n#!!doc" />
+            <element signature="e#215#296#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebOfScienceSpider/spiders/webOfScience.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="48" selection-start-line="48" selection-end-line="165" selection-end-column="18" />
+        <state relative-caret-position="-659">
+          <caret line="154" column="39" selection-start-line="154" selection-start-column="39" selection-end-line="154" selection-end-column="39" />
           <folding>
-            <element signature="e#24#37#0" expanded="true" />
-            <element signature="e#100#494#0" />
-            <element signature="e#507#1413#0" />
-            <element signature="e#1527#4985#0" />
-            <element signature="e#1886#2437#0" />
-            <element signature="e#2487#3565#0" />
-            <element signature="e#3866#4937#0" />
-            <element signature="e#3615#3683#1" />
-            <element signature="e#3930#4075#0" />
-            <element signature="e#4109#4845#0" />
+            <element signature="e#241#635#0" />
+            <element signature="e#648#1554#0" />
+            <element signature="e#1838#1987#0" />
+            <element signature="e#2027#2578#0" />
+            <element signature="e#2619#3870#0" />
+            <element signature="e#7515#7772#0" />
+            <element signature="e#6017#6162#0" />
+            <element signature="e#6147#6883#0" />
+            <element signature="e#6263#6729#0" />
           </folding>
         </state>
       </provider>
