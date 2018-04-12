@@ -37,4 +37,41 @@ class LiteratureItem(scrapy.Item):
     update_time = scrapy.Field()
 
     def get_insert_sql(self):
-        pass
+        # 插入知乎question表的sql语句
+        insert_sql="""
+                    insert into literature(
+                    url, title, author, source, source_info, doi, year, type, 
+                    abstract, keyword, fund, publisher, cited_num, cite_num, cited_180, cited_2013, 
+                    crawl_time, update_time
+                    )
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                    ON DUPLICATE KEY UPDATE cited_num=VALUES(cited_num), cite_num=VALUES(cite_num), cited_180=VALUES(cited_180),
+                      cited_2013=VALUES(cited_2013), update_time=VALUES(update_time)
+                """
+
+        url = self['url']
+        title = self['title']
+        author = self['author']
+        source = self['source']
+        source_info = self['source_info']
+        doi = self['doi']
+        year = self['year']
+        type = self['type']
+        abstract = self['abstract']
+        keyword = self['keyword']
+        fund = self['fund']
+        publisher = self['publisher']
+        cited_num = self['cited_num']
+        cite_num = self['cite_num']
+        cited_180 = self['cited_180']
+        cited_2013 = self['cited_2013']
+        crawl_time = self['crawl_time']
+        update_time = self['update_time']
+
+        params = (
+            url, title, author, source, source_info, doi, year, type,
+            abstract, keyword, fund, publisher, cited_num, cite_num, cited_180, cited_2013,
+            crawl_time, update_time
+        )
+
+        return insert_sql, params

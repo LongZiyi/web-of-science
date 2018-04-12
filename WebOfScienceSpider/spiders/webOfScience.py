@@ -6,7 +6,6 @@ import datetime
 from urllib import parse
 from scrapy.loader import ItemLoader
 from WebOfScienceSpider.items import LiteratureItem
-from WebOfScienceSpider.utils.common import get_md5
 from WebOfScienceSpider.settings import SQL_DATETIME_FORMAT
 
 HEADERS = {
@@ -169,7 +168,6 @@ class WebofscienceSpider(scrapy.Spider):
         for i in rsp_list:
             name = i.xpath("div[@class='title3']/text()").extract()
             for j in name:
-                print(j)
                 if j == '关键词':
                     key = i.xpath("p[@class='FR_field']/span[@class='FR_label']/text()").extract()
                     for k in key:
@@ -201,14 +199,13 @@ class WebofscienceSpider(scrapy.Spider):
         crawl_time = datetime.datetime.now().strftime(SQL_DATETIME_FORMAT)
         update_time = datetime.datetime.now().strftime(SQL_DATETIME_FORMAT)
 
-        item_loader = ItemLoader(item=LiteratureItem, response=response)
+        item_loader = ItemLoader(item=LiteratureItem(), response=response)
         item_loader.add_value('url', response.url)
         item_loader.add_value('title', title)
         item_loader.add_value('author', authors)
         item_loader.add_value('source', source)
         item_loader.add_value('source_info', source_info)
         item_loader.add_value('doi', doi)
-        item_loader.add_value('doi_object_id', get_md5(doi))
         item_loader.add_value('year', year)
         item_loader.add_value('type', type)
         item_loader.add_value('abstract', abstract)
@@ -224,8 +221,8 @@ class WebofscienceSpider(scrapy.Spider):
         item_loader.add_value('crawl_time', crawl_time)
         item_loader.add_value('update_time', update_time)
 
-        article_item=item_loader.load_item()
-        yield article_item
+        literature_item = item_loader.load_item()
+        yield literature_item
 
     def _get_condition(self):
         '''
